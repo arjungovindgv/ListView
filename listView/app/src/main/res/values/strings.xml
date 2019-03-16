@@ -1,4 +1,10 @@
 <resources>
     <string name="app_name">ListView</string>
     <string name="imageView">imageView</string>
+    <string name="close">Close</string>
+    <string name="country_name">Country Name</string>
+    <string name="closed">close</string>
+    <string name="country_name1">country_name</string>
+    <string name="hi_buddy_can_i_close">Close</string>
+    <string name="oh_shit">Oh shit</string>
 </resources>

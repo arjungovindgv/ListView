@@ -1,20 +1,25 @@
 package com.myapp.test.listview;
 
+import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.content.res.Resources;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+import java.util.concurrent.CountedCompleter;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements AdapterView.OnItemClickListener {
     ListView listView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +27,17 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         listView = findViewById(R.id.listView);
         listView.setAdapter(new VickzAdapter(this));
+        listView.setOnItemClickListener(this);
+    }
+
+    @Override
+    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+        Intent intent = new Intent(this,dialog.class);
+        Viewholder holder = (Viewholder) view.getTag();
+        Country text = (Country)holder.textView.getTag();
+        Country texts = (Country)holder.imageView.getTag();
+        intent.putExtra("CountryName",text.countryName);
+        startActivity(intent);
     }
 }
 
