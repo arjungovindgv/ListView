@@ -1,0 +1,30 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+   <string-array name="countryName">
+       <item>azerbaijan</item>
+       <item>bangladesh</item>
+       <item>bhutan</item>
+       <item>cambodia</item>
+       <item>china</item>
+       <item>cyprus</item>
+       <item>india</item>
+       <item>israel</item>
+       <item>japan</item>
+       <item>kazakhstan</item>
+       <item>kyrgyzstan</item>
+       <item>pakistan</item>
+       <item>south_korea</item>
+       <item>sri_lanka</item>
+       <item>yemen</item>
+       <item>zimbabwe</item>
+   </string-array>
+
+</resources>
